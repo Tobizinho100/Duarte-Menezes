@@ -1,10 +1,10 @@
 import mpLogo from '../assets/images/regenerated_image_1792176877247.png';
 import mpDetailWall from '../assets/images/mp_detail_wall_1792107411267.jpg';
-import carReelVertical from '../assets/images/car_reel_vertical_1792104583712.jpg';
+import carReelVertical from '../assets/videos/Reel_MP.mp4';
 
-import igorSilverLogo from '../assets/images/regenerated_image_1792181249678.jpg';
+import igorSilverLogo from '../assets/images/igor_franca_silver_1792107393375.jpg';
 import igorSalonShowcase from '../assets/images/igor_franca_salon_showcase_1792104552315.jpg';
-import barberReelVertical from '../assets/images/barber_reel_vertical_1792104600205.jpg';
+import barberReelVertical from '../assets/videos/Reel_Igor.mov';
 
 export interface ProjectCardItem {
   id: 'logo' | 'space' | 'reels';
@@ -30,21 +30,21 @@ export const PROJECTS_DATA: SimpleProject[] = [
     category: 'Estética Automóvel',
     logo: {
       id: 'logo',
-      label: 'O Logótipo',
+      label: 'Logótipo',
       image: mpLogo,
       alt: 'Logótipo MP Car Detail',
     },
     space: {
       id: 'space',
-      label: 'O Espaço',
+      label: 'Espaço',
       image: mpDetailWall,
       alt: 'Espaço MP Car Detail com branding na parede',
     },
     reels: {
       id: 'reels',
-      label: 'Reels',
+      label: 'Reel',
       image: carReelVertical,
-      videoUrl: '/videos/mp_car_reel.mp4',
+      videoUrl: '/videos/Reel_MP.mp4',
       alt: 'Vídeo Reel MP Car Detail produzido por Duarte Menezes',
     },
   },
@@ -54,21 +54,21 @@ export const PROJECTS_DATA: SimpleProject[] = [
     category: 'Barbearia & Salão',
     logo: {
       id: 'logo',
-      label: 'O Logótipo',
+      label: 'Logótipo',
       image: igorSilverLogo,
       alt: "Logótipo Igor França Men's Salon",
     },
     space: {
       id: 'space',
-      label: 'O Espaço',
+      label: 'Espaço',
       image: igorSalonShowcase,
       alt: "Espaço Igor França Men's Salon",
     },
     reels: {
       id: 'reels',
-      label: 'Reels',
+      label: 'Reel',
       image: barberReelVertical,
-      videoUrl: '/videos/igor_barber_reel.mp4',
+      videoUrl: '/videos/Reel_Igor.mov',
       alt: 'Vídeo Reel Barbearia Igor França produzido por Duarte Menezes',
     },
   },

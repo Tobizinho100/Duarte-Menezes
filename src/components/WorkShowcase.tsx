@@ -298,7 +298,7 @@ export const WorkShowcase: React.FC = () => {
                               </div>
 
                               <div className="absolute bottom-2.5 left-2.5 text-[11px] font-mono text-white bg-black/75 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/10 pointer-events-none">
-                                Abrir Reel (Com Som)
+                                Abrir Reel
                               </div>
                             </div>
                           ) : (
@@ -320,40 +320,6 @@ export const WorkShowcase: React.FC = () => {
                             </>
                           )}
                         </div>
-
-                        {/* Dedicated video upload button directly under the reel card */}
-                        {isReel && (
-                          <div className="mt-2.5 flex items-center justify-between text-[11px]">
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                videoInputRefs.current[project.id]?.click();
-                              }}
-                              className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-blue-400 hover:text-blue-300 border border-slate-800 hover:border-slate-700 font-semibold transition-all shadow-sm active:scale-95"
-                              title="Carregar ou substituir o vídeo MP4 deste projeto"
-                            >
-                              <Upload className="w-3.5 h-3.5" />
-                              <span>
-                                {hasCustomVideo
-                                  ? 'Substituir vídeo (.mp4)'
-                                  : project.id === 'igor-franca'
-                                  ? 'Carregar vídeo Igor França (.mp4)'
-                                  : 'Carregar vídeo MP Car Detail (.mp4)'}
-                              </span>
-                            </button>
-
-                            <input
-                              type="file"
-                              accept="video/mp4,video/*"
-                              ref={(el) => {
-                                videoInputRefs.current[project.id] = el;
-                              }}
-                              onChange={(e) => handleVideoUpload(project.id, e)}
-                              className="hidden"
-                            />
-                          </div>
-                        )}
                       </div>
                     );
                   })}
@@ -481,17 +447,6 @@ export const WorkShowcase: React.FC = () => {
                           <span>Reproduzir</span>
                         </>
                       )}
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() =>
-                        videoInputRefs.current[selectedPhoto.project.id]?.click()
-                      }
-                      className="cursor-pointer inline-flex items-center gap-1 text-[11px] text-blue-400 hover:text-blue-300"
-                    >
-                      <Upload className="w-3.5 h-3.5" />
-                      <span>Substituir vídeo</span>
                     </button>
                   </div>
                 </div>
